@@ -1,0 +1,22 @@
+<div class="container">
+  <span class="title">Email</span>
+  <input type="text" name="email" (keyup)="onChange($event)" />
+  <span class="{{ validate }}">
+    <svg
+      width="16px"
+      height="16px"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+      <path
+        d="M43 11L16.875 37L5 25.1818"
+        stroke="green"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </span>
+</div>
