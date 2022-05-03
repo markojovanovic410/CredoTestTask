@@ -17,4 +17,12 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+input{
+  border: none !important;
+  font-size: 18px !important;
+  &:focus-visible {
+      border: none !important;
+      outline: none !important;
+  }
+}
 /* Importing Bootstrap SCSS file. */

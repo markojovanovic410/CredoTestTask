@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { IDatePickerConfig } from 'ng2-date-picker';
 import { materialize } from 'rxjs';
 import { DateSelectModalComponent } from '../date-select-modal/date-select-modal.component';
 
@@ -14,13 +15,16 @@ export class DateInputComponent implements OnInit {
   show = true;
   closeResult = '';
 
-  config = {};
+  config: IDatePickerConfig = {
+    numOfMonthRows: 4,
+    multipleYearsNavigateBy: 10,
+  };
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
-  onChange(event: KeyboardEvent) {
-    let inputVal = (event.target as HTMLInputElement).value;
+  onChange(event: any) {
+    let inputVal = event.$d;
     this.date = inputVal;
     this.setDate.emit(inputVal);
   }

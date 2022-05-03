@@ -22,12 +22,12 @@
         left: 10px;
     }
     input{
-        border: none;
-        min-width: 270px;
-        font-size: 18px;
+        border: none !important;
+        min-width: 270px !important;  
+        font-size: 18px !important;
         &:focus-visible {
-            border: none;
-            outline: none;
+            border: none !important;
+            outline: none !important;
         }
     }
     

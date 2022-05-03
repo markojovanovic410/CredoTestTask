@@ -1,6 +1,11 @@
 <div class="container">
   <span class="title">Date</span>
-  <input type="text" name="date" [dpDayPicker]="config" />
+  <!-- <input type="text" name="date" [dpDayPicker]="config"  /> -->
+  <dp-date-picker
+    theme="dp-material"
+    (onChange)="onChange($event)"
+    [config]="config"
+  ></dp-date-picker>
   <!-- <div *ngIf="show" class="modal fade">
   </div> -->
   <span>
